@@ -2,101 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lakshmi Prasanna | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lakshmi Prasanna</title>
 
-  <!-- CSS LINK -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-<div class="container">
 
-  <!-- NAVBAR -->
-  <nav>
-    <div class="logo">LP</div>
-    <div class="nav-links">
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+<header class="nav">
+  <div class="nav-left">LP</div>
+  <div class="nav-right">
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+
+<main>
 
   <!-- HERO -->
-  <section class="hero">
-    <h1>Lakshmi Prasanna</h1>
-    <h2>Full Stack Developer & AI Enthusiast</h2>
-    <p>
-      I build clean, scalable web applications and intelligent systems
-      with a strong focus on usability and real-world impact.
+  <section class="hero reveal">
+    <h1>
+      I’m <span>Lakshmi Prasanna</span> — aiming to become a
+      <span>Data Scientist</span>.
+    </h1>
+
+    <p class="hero-sub">
+      I build data-driven applications, machine learning models,
+      and clean web interfaces focused on real-world impact.
     </p>
 
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="https://github.com/lucy02-zone" target="_blank">GitHub</a>
-      <a class="btn btn-secondary" href="https://www.linkedin.com/in/lakshmi-prasanna-reddy-6a4126337" target="_blank">LinkedIn</a>
+    <div class="hero-links">
+      <a href="https://github.com/lucy02-zone" target="_blank">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/lakshmi-prasanna-reddy-6a4126337" target="_blank">LinkedIn ↗</a>
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <h3>Projects</h3>
-    <p class="section-desc">Selected work showcasing my skills</p>
+  <section id="projects" class="projects reveal">
+    <h2>Projects</h2>
 
-    <div class="projects">
+    <div class="project-grid">
 
       <div class="project-card">
-        <h4>BlinkCards</h4>
-        <p>Flashcard-based learning app focused on memory retention.</p>
+        <h3>BlinkCards</h3>
+        <p>Flashcard-based learning app designed to improve memory retention.</p>
         <div class="tags">
-          <span class="tag">React</span>
-          <span class="tag">JavaScript</span>
+          <span>React</span>
+          <span>JavaScript</span>
         </div>
         <a href="https://github.com/lucy02-zone/BlinkCards" target="_blank">View Project →</a>
       </div>
 
       <div class="project-card">
-        <h4>Urchoice</h4>
-        <p>Hybrid movie recommendation system using ML techniques.</p>
+        <h3>Urchoice</h3>
+        <p>Hybrid movie recommendation system using machine learning techniques.</p>
         <div class="tags">
-          <span class="tag">Python</span>
-          <span class="tag">ML</span>
+          <span>Python</span>
+          <span>Machine Learning</span>
         </div>
         <a href="https://github.com/lucy02-zone/Urchoice" target="_blank">View Project →</a>
       </div>
 
       <div class="project-card">
-        <h4>PrepPilot</h4>
-        <p>Student productivity platform with planning and quizzes.</p>
+        <h3>PrepPilot</h3>
+        <p>Student productivity platform with planning, notes, and quizzes.</p>
         <div class="tags">
-          <span class="tag">Full Stack</span>
+          <span>Full Stack</span>
+          <span>JavaScript</span>
         </div>
         <a href="https://github.com/lucy02-zone/PrepPilot" target="_blank">View Project →</a>
       </div>
 
       <div class="project-card">
-        <h4>CookBooker</h4>
-        <p>Recipe management and discovery web application.</p>
+        <h3>CookBooker</h3>
+        <p>Recipe discovery and personal cookbook web application.</p>
         <div class="tags">
-          <span class="tag">React</span>
+          <span>React</span>
         </div>
         <a href="https://github.com/lucy02-zone/CookBooker" target="_blank">View Project →</a>
       </div>
 
       <div class="project-card">
-        <h4>HABITS</h4>
-        <p>Habit tracker for GitHub activity and study routines.</p>
+        <h3>HABITS</h3>
+        <p>Habit tracking system for GitHub activity and study routines.</p>
         <div class="tags">
-          <span class="tag">React</span>
-          <span class="tag">Analytics</span>
+          <span>React</span>
+          <span>Analytics</span>
         </div>
         <a href="https://github.com/lucy02-zone/HABITS" target="_blank">View Project →</a>
       </div>
 
       <div class="project-card">
-        <h4>BG – Content Guardian</h4>
+        <h3>BG – Content Guardian</h3>
         <p>NLP-based toxic content detection system.</p>
         <div class="tags">
-          <span class="tag">Python</span>
-          <span class="tag">NLP</span>
+          <span>Python</span>
+          <span>NLP</span>
         </div>
         <a href="https://github.com/lucy02-zone/BG" target="_blank">View Project →</a>
       </div>
@@ -104,11 +106,37 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer id="contact">
-    © 2025 Lakshmi Prasanna
-  </footer>
+  <!-- CONTACT -->
+  <section id="contact" class="contact reveal">
+    <h2>Contact</h2>
+    <p>
+      📞 <a href="tel:9949394272">9949394272</a><br />
+      ✉️ <a href="mailto:lakshmiprasannareddy849@gmail.com">
+        lakshmiprasannareddy849@gmail.com
+      </a>
+    </p>
+  </section>
 
-</div>
+</main>
+
+<footer>
+  © 2025 Lakshmi Prasanna
+</footer>
+
+<script>
+/* Scroll reveal */
+const reveals = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+    }
+  });
+}, { threshold: 0.15 });
+
+reveals.forEach(r => observer.observe(r));
+</script>
+
 </body>
 </html>
