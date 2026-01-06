@@ -1,389 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lakshmi Prasanna | Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lakshmi Prasanna | Portfolio</title>
 
-<style>
-/* ---------- RESET ---------- */
-*{margin:0;padding:0;box-sizing:border-box}
-
-/* ---------- THEME ---------- */
-:root{
-  --bg:#0f1115;
-  --card:#161a22;
-  --text:#ffffff;
-  --muted:#b5b5b5;
-  --accent:#4f8cff;
-  --shadow:0 12px 35px rgba(0,0,0,0.45);
-  --glow:0 0 0 rgba(79,140,255,0);
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.7;
-}
-
-/* ---------- LAYOUT ---------- */
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:24px;
-}
-
-/* ---------- NAV ---------- */
-nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:90px;
-}
-
-.logo{
-  font-size:1.4rem;
-  font-weight:700;
-  color:var(--accent);
-  letter-spacing:.5px;
-}
-
-.nav-links{
-  display:flex;
-  gap:28px;
-}
-
-.nav-links a{
-  color:var(--muted);
-  text-decoration:none;
-  font-weight:500;
-  position:relative;
-}
-
-.nav-links a::after{
-  content:"";
-  position:absolute;
-  bottom:-6px;
-  left:0;
-  width:0;
-  height:2px;
-  background:var(--accent);
-  transition:.3s;
-}
-
-.nav-links a:hover{
-  color:var(--text);
-}
-
-.nav-links a:hover::after{
-  width:100%;
-}
-
-/* ---------- HERO ---------- */
-.hero{
-  margin-bottom:140px;
-  animation:fadeUp .8s ease both;
-}
-
-.hero h1{
-  font-size:3.2rem;
-  font-weight:800;
-  margin-bottom:10px;
-}
-
-.hero h2{
-  font-size:1.3rem;
-  color:var(--accent);
-  font-weight:500;
-  margin-bottom:22px;
-}
-
-.hero p{
-  max-width:600px;
-  color:var(--muted);
-}
-
-.hero-actions{
-  margin-top:40px;
-  display:flex;
-  gap:16px;
-  flex-wrap:wrap;
-}
-
-.btn{
-  padding:12px 30px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:600;
-  transition:.25s;
-  position:relative;
-}
-
-.btn-primary{
-  background:var(--accent);
-  color:#fff;
-}
-
-.btn-primary:hover{
-  transform:translateY(-3px);
-  box-shadow:0 8px 25px rgba(79,140,255,.45);
-}
-
-.btn-primary:active{
-  transform:translateY(0);
-}
-
-.btn-secondary{
-  border:1px solid var(--accent);
-  color:var(--accent);
-}
-
-.btn-secondary:hover{
-  background:rgba(79,140,255,.1);
-}
-
-/* ---------- SECTION ---------- */
-.section{
-  margin-bottom:130px;
-  opacity:0;
-  transform:translateY(40px);
-  transition:.8s ease;
-}
-
-.section.visible{
-  opacity:1;
-  transform:translateY(0);
-}
-
-.section h3{
-  font-size:2rem;
-  margin-bottom:10px;
-  position:relative;
-  display:inline-block;
-}
-
-.section h3::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-6px;
-  width:40%;
-  height:3px;
-  background:var(--accent);
-  border-radius:2px;
-}
-
-.section-desc{
-  color:var(--muted);
-  margin-bottom:45px;
-}
-
-/* ---------- PROJECTS ---------- */
-.projects{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
-}
-
-.project-card{
-  background:var(--card);
-  padding:30px;
-  border-radius:14px;
-  box-shadow:var(--shadow);
-  transition:.3s;
-  position:relative;
-}
-
-.project-card::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  border-radius:14px;
-  box-shadow:0 0 0 rgba(79,140,255,0);
-  transition:.3s;
-}
-
-.project-card:hover{
-  transform:translateY(-8px);
-}
-
-.project-card:hover::after{
-  box-shadow:0 0 0 2px rgba(79,140,255,.35);
-}
-
-.project-card h4{
-  margin-bottom:8px;
-}
-
-.project-card p{
-  color:var(--muted);
-  font-size:.95rem;
-}
-
-.tags{
-  margin:16px 0;
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-}
-
-.tag{
-  font-size:.75rem;
-  padding:4px 10px;
-  border-radius:6px;
-  background:#1e2433;
-  color:var(--accent);
-}
-
-.project-card a{
-  color:var(--accent);
-  text-decoration:none;
-  font-weight:600;
-  font-size:.9rem;
-}
-
-.project-card a:hover{
-  text-decoration:underline;
-}
-
-/* ---------- FOOTER ---------- */
-footer{
-  border-top:1px solid #1e2433;
-  padding:50px 0;
-  color:var(--muted);
-  text-align:center;
-}
-
-/* ---------- ANIMATIONS ---------- */
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(30px)}
-  to{opacity:1;transform:translateY(0)}
-}
-
-/* ---------- RESPONSIVE ---------- */
-@media(max-width:720px){
-  .hero h1{font-size:2.4rem}
-}
-</style>
+  <!-- CSS LINK -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 <div class="container">
 
-<nav>
-  <div class="logo">LP</div>
-  <div class="nav-links">
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
-
-<section class="hero">
-  <h1>Lakshmi Prasanna</h1>
-  <h2>Full Stack Developer & AI Enthusiast</h2>
-  <p>
-    I build clean, scalable web applications and intelligent systems
-    with a strong focus on usability and real-world impact.
-  </p>
-
-  <div class="hero-actions">
-    <a class="btn btn-primary" href="https://github.com/lucy02-zone" target="_blank">GitHub</a>
-    <a class="btn btn-secondary" href="https://www.linkedin.com/in/lakshmi-prasanna-reddy-6a4126337" target="_blank">LinkedIn</a>
-  </div>
-</section>
-
-<section id="projects" class="section">
-  <h3>Projects</h3>
-  <p class="section-desc">Selected work showcasing my skills</p>
-
-  <div class="projects">
-
-    <div class="project-card">
-      <h4>BlinkCards</h4>
-      <p>Flashcard-based learning app focused on memory retention.</p>
-      <div class="tags">
-        <span class="tag">React</span>
-        <span class="tag">JavaScript</span>
-      </div>
-      <a href="https://github.com/lucy02-zone/BlinkCards" target="_blank">View Project →</a>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">LP</div>
+    <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </div>
+  </nav>
 
-    <div class="project-card">
-      <h4>Urchoice</h4>
-      <p>Hybrid movie recommendation system using ML techniques.</p>
-      <div class="tags">
-        <span class="tag">Python</span>
-        <span class="tag">ML</span>
-      </div>
-      <a href="https://github.com/lucy02-zone/Urchoice" target="_blank">View Project →</a>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Lakshmi Prasanna</h1>
+    <h2>Full Stack Developer & AI Enthusiast</h2>
+    <p>
+      I build clean, scalable web applications and intelligent systems
+      with a strong focus on usability and real-world impact.
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="https://github.com/lucy02-zone" target="_blank">GitHub</a>
+      <a class="btn btn-secondary" href="https://www.linkedin.com/in/lakshmi-prasanna-reddy-6a4126337" target="_blank">LinkedIn</a>
     </div>
+  </section>
 
-    <div class="project-card">
-      <h4>PrepPilot</h4>
-      <p>Student productivity platform with planning and quizzes.</p>
-      <div class="tags">
-        <span class="tag">Full Stack</span>
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <h3>Projects</h3>
+    <p class="section-desc">Selected work showcasing my skills</p>
+
+    <div class="projects">
+
+      <div class="project-card">
+        <h4>BlinkCards</h4>
+        <p>Flashcard-based learning app focused on memory retention.</p>
+        <div class="tags">
+          <span class="tag">React</span>
+          <span class="tag">JavaScript</span>
+        </div>
+        <a href="https://github.com/lucy02-zone/BlinkCards" target="_blank">View Project →</a>
       </div>
-      <a href="https://github.com/lucy02-zone/PrepPilot" target="_blank">View Project →</a>
-    </div>
 
-    <div class="project-card">
-      <h4>CookBooker</h4>
-      <p>Recipe management and discovery web application.</p>
-      <div class="tags">
-        <span class="tag">React</span>
+      <div class="project-card">
+        <h4>Urchoice</h4>
+        <p>Hybrid movie recommendation system using ML techniques.</p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">ML</span>
+        </div>
+        <a href="https://github.com/lucy02-zone/Urchoice" target="_blank">View Project →</a>
       </div>
-      <a href="https://github.com/lucy02-zone/CookBooker" target="_blank">View Project →</a>
-    </div>
 
-    <div class="project-card">
-      <h4>HABITS</h4>
-      <p>Habit tracker for GitHub activity and study routines.</p>
-      <div class="tags">
-        <span class="tag">React</span>
-        <span class="tag">Analytics</span>
+      <div class="project-card">
+        <h4>PrepPilot</h4>
+        <p>Student productivity platform with planning and quizzes.</p>
+        <div class="tags">
+          <span class="tag">Full Stack</span>
+        </div>
+        <a href="https://github.com/lucy02-zone/PrepPilot" target="_blank">View Project →</a>
       </div>
-      <a href="https://github.com/lucy02-zone/HABITS" target="_blank">View Project →</a>
-    </div>
 
-    <div class="project-card">
-      <h4>BG – Content Guardian</h4>
-      <p>NLP-based toxic content detection system.</p>
-      <div class="tags">
-        <span class="tag">Python</span>
-        <span class="tag">NLP</span>
+      <div class="project-card">
+        <h4>CookBooker</h4>
+        <p>Recipe management and discovery web application.</p>
+        <div class="tags">
+          <span class="tag">React</span>
+        </div>
+        <a href="https://github.com/lucy02-zone/CookBooker" target="_blank">View Project →</a>
       </div>
-      <a href="https://github.com/lucy02-zone/BG" target="_blank">View Project →</a>
+
+      <div class="project-card">
+        <h4>HABITS</h4>
+        <p>Habit tracker for GitHub activity and study routines.</p>
+        <div class="tags">
+          <span class="tag">React</span>
+          <span class="tag">Analytics</span>
+        </div>
+        <a href="https://github.com/lucy02-zone/HABITS" target="_blank">View Project →</a>
+      </div>
+
+      <div class="project-card">
+        <h4>BG – Content Guardian</h4>
+        <p>NLP-based toxic content detection system.</p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">NLP</span>
+        </div>
+        <a href="https://github.com/lucy02-zone/BG" target="_blank">View Project →</a>
+      </div>
+
     </div>
+  </section>
 
-  </div>
-</section>
-
-<footer id="contact">
-  © 2025 Lakshmi Prasanna
-</footer>
+  <!-- FOOTER -->
+  <footer id="contact">
+    © 2025 Lakshmi Prasanna
+  </footer>
 
 </div>
-
-<script>
-/* -------- SCROLL REVEAL -------- */
-const sections = document.querySelectorAll(".section");
-
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("visible");
-    }
-  });
-},{threshold:0.2});
-
-sections.forEach(sec=>observer.observe(sec));
-</script>
-
 </body>
 </html>
